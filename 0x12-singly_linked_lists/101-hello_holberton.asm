@@ -1,22 +1,15 @@
-#include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-/**
- * list_len - function that prints all the elements of a list_t list
- * @h: pointer to the struct list_t
- *
- * Return: size_t
- */
+	SECTION .text
+	extern printf
+	global main
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-size_t list_len(const list_t *h)
-{
-	size_t count;
-
-	for (count = 0; h != NULL; count++)
-	{
-		h = (*h).next;
-	}
-	return (count);
-}
+	mov eax, 0
+	ret
