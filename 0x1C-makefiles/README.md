@@ -1,6 +1,7 @@
 # 0x1C. C - Makefiles
 
 MAKE AND MAKEFILE:
+
 • The make utility is a software tool for managing and maintaining computer programs consisting many component files. The make utility
 automatically determines which pieces of a large program need to be recompiled, and issues commands to recompile them.
 
